@@ -1,0 +1,33 @@
+@import 'lib/bootstrap-reboot.min.scss';
+
+@import 'main/fonts';
+@import 'main/variables';
+@import 'main/reused';
+
+* {
+    font-family: 'Poppins', sans-serif;
+    color:$text;
+}
+body {
+    background-color: $body;
+}
+ul, p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: $text;
+    text-decoration: none;
+    transition: all 0.8s ease;
+    @media(min-width:992px){
+        &:hover{
+        color:$elem;
+    }}
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+@import 'blocks/promo';

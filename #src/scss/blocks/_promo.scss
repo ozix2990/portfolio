@@ -1,0 +1,45 @@
+.promo {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background:url('../img/promo_bg.jpg') center (center/cover) no-repeat;
+    padding-top: 20vh;
+
+    // .promo__social
+
+    &__social {
+    }
+
+    // .promo__subtitle
+
+    &__subtitle {
+        margin-bottom: 9px;
+    }
+
+    // .promo__title
+
+    &__title {
+        text-align: left;
+        font-size: 48px;
+        text-shadow: 2px 2px 5px #000;
+        margin-bottom: 25px;
+    }
+
+    // .promo__buttons
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    // .promo__link
+
+    &__link {
+        font-weight: 700;
+        &:first-child {
+            margin-right: 44px;
+        }
+    }
+
+
+}
