@@ -121,12 +121,12 @@ function clean () {
 }
 
 gulp.task(`svg`, function(){
-    return gulp.src([source_folder + '/iconsprite/**/*.svg'])
+    return gulp.src([source_folder + '/iconsprite/*.svg'])
     .pipe(svgSprite({
         mode: {
             stack: {
                 sprite: "../icons/icons.svg",
-                example: false
+                example: true
             }
         }
     }))
