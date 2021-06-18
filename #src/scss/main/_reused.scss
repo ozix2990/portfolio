@@ -167,16 +167,22 @@
             height: 15px;
             background-color: $text;
             border-radius: 100%;
-           margin-right: 20px;
+            margin-right: 20px;
+            transition: all 0.8s ease;
         }
 
     }
 
     // .menu__link
 
-    &__link {
+    &__item {
         @media(min-width:992px){&:hover{
-            color:#000;
+            .menu__link {
+                color:#000;
+            }
+            &::before {
+                background-color:#000;
+            }
         }}
         
 
