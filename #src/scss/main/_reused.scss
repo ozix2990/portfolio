@@ -218,6 +218,7 @@
     @media(max-width:440px){
         &__block {
             width: 100%;
+            left:-100%;
         }
         &__social {
             justify-content: space-around;
