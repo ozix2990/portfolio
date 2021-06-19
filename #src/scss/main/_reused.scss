@@ -5,17 +5,20 @@
     padding: 0;
     margin: 0;
 }
+
 .descr {
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
-    color:$text;
+    color: $text;
 }
+
 .descr-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
 }
+
 .subtitle {
     position: relative;
     font-size: 16px;
@@ -23,6 +26,7 @@
     font-weight: 700;
     padding: 6px 0 6px 10px;
     z-index: 1;
+
     &::before {
         position: absolute;
         width: 36px;
@@ -34,17 +38,20 @@
         border-radius: 100%;
         z-index: -1;
     }
+
     &_center {
         p {
             text-align: center;
         }
+
         &::before {
             left: 50%;
             transform: translateX(-50%);
         }
     }
-  
+
 }
+
 .button {
     display: flex;
     justify-content: center;
@@ -54,47 +61,60 @@
     background: #DA3A3A;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: all 0.8s ease;
-    @media(hover){&:hover{
-        color:$text;
-        background-color: #e72424;
-    }}
+
+    @media(any-hover: hover) {
+        &:hover {
+            color: $text;
+            background-color: #e72424;
+        }
+    }
 }
+
 .social {
     display: flex;
     min-width: 338px;
     justify-content: space-between;
     align-items: center;
     text-shadow: 2px 2px 5px #000;
+
     &__text {
         font-size: 16px;
         line-height: 24px;
         font-weight: 700;
     }
+
     &__line {
         width: 70px;
         height: 2px;
         margin: 0 15px;
-        background-color:#fff;
+        background-color: #fff;
         box-shadow: 2px 2px 5px #000;
     }
-   &__items {
-       width: 140px;
-       display: flex;
-       justify-content: space-between;
-       font-size: 25px;
-   }
-   &__link {
-       padding: 0 10px;
-       span:before {
-           transition: all 0.3s ease;
-       }
-       @media(hover){&:hover{
-           span:before {
-               color:$elem;
-           }
-       }}
-   }
+
+    &__items {
+        width: 140px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+    }
+
+    &__link {
+        padding: 0 10px;
+
+        span:before {
+            transition: all 0.3s ease;
+        }
+
+        @media(min-width:992px) {
+            &:hover {
+                span:before {
+                    color: $elem;
+                }
+            }
+        }
+    }
 }
+
 .menu {
     position: fixed;
     z-index: 50;
@@ -103,11 +123,14 @@
     left: 0;
     top: 0;
     visibility: hidden;
+
     &_active {
         visibility: visible;
+
         .menu__block {
             left: 0;
         }
+
         .menu__overlay {
             opacity: 1;
         }
@@ -117,15 +140,15 @@
     // .menu__block
 
     &__block {
-       position: relative;
-       left: -345px;
-       z-index: 60;
-       width: 345px;
-       height: 100vh;
-       background-color: $elem;
-       padding: 15vh 40px 40px 40px;
-       transition: all 0.8s ease;
-       overflow: auto;
+        position: relative;
+        left: -345px;
+        z-index: 60;
+        width: 345px;
+        height: 100vh;
+        background-color: $elem;
+        padding: 15vh 40px 40px 40px;
+        transition: all 0.8s ease;
+        overflow: auto;
     }
 
     // .menu__close
@@ -136,6 +159,7 @@
         top: 25px;
         cursor: pointer;
         width: 30px;
+
         img {
             width: 100%;
         }
@@ -157,9 +181,11 @@
         align-items: center;
         list-style-type: none;
         margin-bottom: 15px;
+
         &:last-child {
             margin-bottom: 40px;
         }
+
         &::before {
             display: block;
             content: "";
@@ -176,15 +202,18 @@
     // .menu__link
 
     &__item {
-        @media(hover){&:hover{
-            .menu__link { 
-                color:#000;
+        @media(min-width:992px) {
+            &:hover {
+                .menu__link {
+                    color: #000;
+                }
+
+                &::before {
+                    background-color: #000;
+                }
             }
-            &::before {
-                background-color:#000;
-            }
-        }}
-        
+        }
+
 
     }
 
@@ -196,18 +225,22 @@
         max-width: 100%;
         font-size: 30px;
         justify-content: space-around;
+
         .social__link {
             span::before {
-                color:#fff;
+                color: #fff;
                 text-shadow: none;
             }
-            @media(hover){&:hover{
-                span::before {
-                    color:#000;
+
+            @media(min-width:992px) {
+                &:hover {
+                    span::before {
+                        color: #000;
+                    }
                 }
-            }}
+            }
         }
-        
+
     }
 
     // .menu__overlay
@@ -215,17 +248,19 @@
         position: absolute;
         top: 0;
         left: 0;
-        opacity:0;
+        opacity: 0;
         width: 100vw;
         height: 100vh;
         background: rgba(71, 72, 73, 0.75);
         transition: all 0.8s ease;
     }
-    @media(max-width:440px){
+
+    @media(max-width:440px) {
         &__block {
             width: 100%;
-            left:-100%;
+            left: -100%;
         }
+
         &__social {
             justify-content: space-around;
             min-width: 100%;

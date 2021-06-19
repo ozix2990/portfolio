@@ -21,7 +21,7 @@ a {
     &:hover {
         color: $text;
     }
-    @media(hover){
+    @media(min-width:992px){
         &:hover{
         color:$elem;
     }}
@@ -36,4 +36,5 @@ a {
 }
 @import 'blocks/promo';
 @import 'blocks/header';
+@import 'blocks/about';
 
