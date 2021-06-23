@@ -31,18 +31,7 @@
     &__collumn {
         display: flex;
         flex-direction: column;
-        gap: 45px;
-        position: relative;
         padding-left: 50px;
-        &::before {
-            width: 2px;
-            height: 100%;
-            content: "";
-            position: absolute;
-            left: calc((15px / 2) - 1px);
-            top:15px;
-            background: $text;
-        }
     }
 
     // .experience__collumn-title
@@ -69,6 +58,17 @@
     // .experience__item
 
     &__item {
+        position: relative;
+        padding-top: 45px;
+        &::before {
+            width: 2px;
+            height: 100%;
+            content: "";
+            position: absolute;
+            left: calc(-52px + (15px / 2));
+            top: -8px;
+            background: $text;
+        }
     
     }
 
