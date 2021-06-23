@@ -1,0 +1,129 @@
+.experience {
+    padding: 60px 0;
+
+    // .experience__subtitle
+
+    &__subtitle {
+
+    }
+
+    // .experience__title
+
+    &__title {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    &__line {
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+    // .experience__useful
+
+    &__useful {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 135px;
+        padding: 0 34px;
+    }
+
+    // .experience__collumn
+
+    &__collumn {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        position: relative;
+        padding-left: 50px;
+        &::before {
+            width: 2px;
+            height: 100%;
+            content: "";
+            position: absolute;
+            left: calc((15px / 2) - 1px);
+            top:15px;
+            background: $text;
+        }
+    }
+
+    // .experience__collumn-title
+
+    &__collumn-title {
+        position: relative;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 700;
+        margin: 0;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 15px;
+            height: 15px;
+            background: $elem;
+            left: -50px;
+            top:50%;
+            transform: translateY(-50%);
+            border-radius: 100%;
+        }
+    }
+
+    // .experience__item
+
+    &__item {
+    
+    }
+
+    // .experience__item-head
+
+    &__item-head {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: calc(50px - (15px / 2));
+            background: $text;
+            left: calc(-50px + (15px / 2));
+            top: calc(36px / 2);
+        }
+    }
+
+    // .experience__item-icon
+
+    &__item-icon {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 36px;
+        height: 36px;
+        padding: 6px;
+        border-radius: 100%;
+        background:$elem;
+        img {
+            width: 100%;
+        }
+    }
+
+    // .experience__item-title
+
+    &__item-title {
+        margin-bottom: 0;
+    }
+
+    // .experience__item-location
+
+    &__item-location {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 12px;
+    }
+
+    // .experience__item-body
+
+    &__item-body {
+        text-align: justify;
+    }
+
+
+}

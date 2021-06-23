@@ -9,32 +9,21 @@
         gap: 70px;
     }
 
-    // .about__left
-
-    &__left {}
-
     // .about__img
 
     &__img {
         width: 100%;
     }
 
-    // .about__right
-
-    &__right {}
 
     // .about__subtitle
 
     &__subtitle {
         margin-bottom: 6px;
     }
-
-    // .about__title
-
-    &__title {
-        margin-bottom: 24px;
+    &__line {
+        margin-bottom: 20px;
     }
-
     // .about__descr
 
     &__descr {
@@ -63,6 +52,9 @@
 
     &-img-wrapper {
         flex: 0 0 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 36px;
         padding: 6px;
         background-color: $elem;
