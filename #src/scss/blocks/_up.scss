@@ -1,0 +1,31 @@
+.up-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+    &_active {
+        visibility: visible;
+        opacity: .7;
+       @media (min-width:992px){
+        &:hover {
+            opacity: 1;
+        }
+       }
+    }
+   
+
+    // .up-button__link
+
+    &__link {
+    }
+
+    // .up-button__img
+
+    &__img {
+        max-width: 100%;
+    }
+}

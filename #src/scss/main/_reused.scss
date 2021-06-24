@@ -100,11 +100,11 @@
         width: 140px;
         display: flex;
         justify-content: space-between;
-        font-size: 25px;
     }
 
     &__link {
         padding: 0 10px;
+        font-size: 20px;
 
         span:before {
             transition: all 0.3s ease;
@@ -205,6 +205,10 @@
     }
 
     // .menu__link
+    &__link {
+        font-size: 24px;
+        line-height: 36px;
+    }
 
     &__item {
         @media(min-width:992px) {

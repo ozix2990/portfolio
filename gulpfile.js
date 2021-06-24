@@ -124,7 +124,12 @@ gulp.task(`svg`, function(){
     return gulp.src([source_folder + '/iconsprite/*.svg'])
     .pipe(svgSprite({
         mode: {
-            stack: {
+            // stack: {
+            //     sprite: "../icons/icons.svg",
+            //     example: true
+            // }
+            inline: true,
+            symbol: {
                 sprite: "../icons/icons.svg",
                 example: true
             }

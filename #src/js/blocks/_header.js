@@ -1,6 +1,6 @@
-window.onload = function () {
     const menu = document.querySelector(`.menu`),
-        burger = document.querySelector(`.header__burger`);
+        burger = document.querySelector(`.header__burger`),
+        upBtn = document.querySelector(`.up-button`);
         let width;
         let paddingRight;
     burger.addEventListener(`click`, function () {
@@ -10,6 +10,7 @@ window.onload = function () {
         paddingRight = document.documentElement.clientWidth - width;
         document.body.style.paddingRight = paddingRight + `px`;
         burger.style.marginRight = paddingRight + `px`;
+        upBtn.style.marginRight = paddingRight + `px`;
     });
     menu.addEventListener(`click`, function (e) {
         if (e.target.classList.contains(`menu__link`) || e.target.closest(`.menu__close`) || e.target.classList.contains(`menu__overlay`) || e.target.closest(`.social__link`)) {
@@ -17,6 +18,6 @@ window.onload = function () {
             document.body.classList.remove(`hidden`);
             document.body.style.paddingRight = 0;
             burger.style.marginRight = 0;
+            upBtn.style.marginRight = 0;
         }
     });
-};

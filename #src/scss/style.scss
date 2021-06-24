@@ -18,6 +18,7 @@ a {
     color: $text;
     text-decoration: none;
     transition: all 0.8s ease;
+    font-size: 14px;
     &:hover {
         color: $text;
     }
@@ -37,8 +38,12 @@ a {
 .hidden {
     overflow: hidden;
 }
+
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/about';
 @import 'blocks/experience';
+@import 'blocks/skills';
+@import 'blocks/up';
+
 
