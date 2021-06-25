@@ -24,7 +24,6 @@ a {
     }
     @media(min-width:992px){
         &:hover{
-            transform:scale(1.1);
             color:$elem;
     }}
 }
