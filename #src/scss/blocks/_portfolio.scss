@@ -53,6 +53,10 @@
             }
         }
     }
+    &__img {
+        min-width: 100%;
+        min-height: 100%;
+    }
     
     
 
@@ -74,5 +78,8 @@
             } 
         }
 
+    }
+    @media(max-width:767px){
+        padding-top: calc(30px + (60 - 30) * ((100vw - 320px) / (767 - 320)));
     }
 }

@@ -1,0 +1,112 @@
+.price {
+    padding-bottom: 60px;
+
+    // .price__subtitle
+
+    &__subtitle {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    // .price__line
+
+    &__line {
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+
+    // .price__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 370px);
+        justify-content: space-between;
+        padding: 0 50px;
+        row-gap: 15px;
+    }
+
+    // .price__item
+
+    &__item {
+        position: relative;
+        padding-left: 25px;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 15px;
+            height: 15px;
+            left: 0;
+            top: 4px;
+            background: $elem;
+            border-radius: 100%;
+        }
+    }
+
+    // .price__item-head
+
+    &__item-head {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+    
+    }
+
+    // .price__item-title
+
+    &__item-title {
+        margin-right: 20px;
+       
+    }
+
+    // .price__item-cost
+
+    &__item-cost {
+        flex: 0 0 auto;
+    }
+    
+    @media(max-width:1000px){
+        &__list {
+            grid-template-columns: 90%;
+            justify-content: center;
+        }
+      
+    }
+    @media(max-width:767px){
+        padding-bottom: calc(30px + (60 - 30) * ((100vw - 320px) / (767 - 320)));
+        &__list {
+            grid-template-columns: 90%;
+            padding: 0;
+            row-gap: 20px;
+        }
+    }
+    @media(max-width:575px){
+        &__list {
+            grid-template-columns: 1fr;
+        }
+        &__item-head {
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        &__item-cost {
+            align-self: flex-end;
+        }
+        &__item-title { 
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: $elem;
+                left: 0;
+                top: calc(100% + 5px);
+                border-radius: 10px;
+            }
+        }
+    }
+
+}

@@ -13,7 +13,31 @@
         top: 50%;
         width: 384px;
         height: 38px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-shadow: 2px 2px 5px #000;
         transform: rotate(-90deg) translateY(-50%);   
+
+        &-text {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 700;
+        }
+        &-sites {
+            width: 140px;
+        }
+    
+        &-line {
+            width: 70px;
+            height: 2px;
+            margin: 0 15px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px #000;
+        }
+    }
+    &__link {
+        padding: 0 10px;
     }
 
     // .promo__subtitle
@@ -35,15 +59,6 @@
     &__buttons {
         display: flex;
         align-items: center;
-    }
-
-    // .promo__link
-
-    &__link {
-        font-weight: 700;
-        &:first-child {
-            margin-right: 44px;
-        }
     }
     @media(max-width:1300px){
         &__social {

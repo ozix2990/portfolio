@@ -78,33 +78,9 @@
 .social {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    text-shadow: 2px 2px 5px #000;
-
-    &__text {
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 700;
-    }
-
-    &__line {
-        width: 70px;
-        height: 2px;
-        margin: 0 15px;
-        background-color: #fff;
-        box-shadow: 2px 2px 5px #000;
-    }
-
-    &__items {
-        width: 140px;
-        display: flex;
-        justify-content: space-between;
-    }
 
     &__link {
-        padding: 0 10px;
         font-size: 20px;
-
         span:before {
             transition: all 0.3s ease;
         }
@@ -119,6 +95,7 @@
         }
     }
 }
+
 
 .menu {
     position: fixed;
@@ -234,10 +211,10 @@
         position: absolute;
         left: 0;
         width: 100%;
-        font-size: 30px;
         justify-content: space-around;
 
         .social__link {
+            font-size: 30px;
             span::before {
                 color: #fff;
                 text-shadow: none;
