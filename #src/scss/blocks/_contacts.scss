@@ -126,12 +126,45 @@
         align-items: center;
         font-weight: 500;
         font-size: 12px;
+        &-label {
+            position: relative;
+            display: inline-flex;
+            cursor: pointer;
+            &::before {
+                align-self: center;
+                content: "";
+                width: 20px;
+                height: 20px;
+                background: $text;
+                margin-right: 10px;
+                border-radius: 5px;
+            }
+            &::after {
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                content: "";
+                top: 8.5px;
+                left: 3px;
+                border-radius: 2px;
+                background: $elem;
+                transform: scale(0);
+                transition: transform 0.3s ease;
+            }
+        }
         ._privacy {
-            margin-right: 10px;
+            display: none;
+        }
+        ._privacy:checked + &-label {
+            &::after {
+                transform: scale(1);
+               
+            }
+
         }
         &-link {
             color:$elem;
-            font-size: 12px;
+            font-size: inherit;
             &:hover {
                 color: $elem;
             }
@@ -163,9 +196,6 @@
         &__button {
             justify-self: center;
             margin-right: 0;
-        }
-        &__img {
-            align-self: center;
         }
     }
     @media(max-width:992px){
@@ -201,6 +231,19 @@
         }
     }
 
+    @media(max-width:360px){
+        &__privacy-label {
+            &::before {
+                align-self: flex-start;
+            }
+            &::after {
+                top: 2.5px;
+            }
+        }
+        &__privacy-text {
+            width: 160px;
+        }
+    }
 
 
 }
