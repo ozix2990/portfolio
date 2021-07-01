@@ -34,6 +34,9 @@ a {
     &-main {
         background: $container;
     }
+    @media(max-width:767px){
+        padding: 0 calc(20px + (30 - 20) * ((100vw - 320px) / (767 - 320)));
+    }
 }
 .hidden {
     overflow: hidden;

@@ -9,9 +9,9 @@
 
     &__social {
         position: fixed;
-        left: calc(-140px + (140 * ((100vw - 1300px) / (1920 - 1300))));
+        left: calc(-140px + (140 * ((100vw - 1400px) / (1920 - 1400))));
         top: 50%;
-        width: 384px;
+        width: 420px;
         height: 38px;
         display: flex;
         justify-content: space-between;
@@ -20,8 +20,7 @@
         transform: rotate(-90deg) translateY(-50%);   
 
         &-text {
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 20px;
             font-weight: 700;
         }
         &-sites {
@@ -36,9 +35,7 @@
             box-shadow: 2px 2px 5px #000;
         }
     }
-    &__link {
-        padding: 0 10px;
-    }
+
 
     // .promo__subtitle
 
@@ -59,8 +56,16 @@
     &__buttons {
         display: flex;
         align-items: center;
+        gap: 44px;
     }
-    @media(max-width:1300px){
+    &__link-button {
+        width: 135px;
+        height: 45px;
+    }
+    &__link {
+        padding: 10px 0;
+    }
+    @media(max-width:1400px){
         &__social {
             display: none;
         }

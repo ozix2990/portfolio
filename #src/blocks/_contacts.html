@@ -1,6 +1,8 @@
-<section class="contacts">
+<section class="contacts" id="contacts">
     <div class="contacts__wrapper">
-        <div class="contacts__img"></div>
+        <div class="contacts__img">
+            <img src="img/lorem.jpg" alt="lorem">
+        </div>
         <div class="contacts__content">
             <div class="contacts__subtitle subtitle">Контакты</div>
             <h2 class="contacts__title title">Свяжитесь со мной</h2>
@@ -13,6 +15,35 @@
                 <a href="#" class="contacts__link social__link"><span class="icon-Facebook"></span></a>
             </div>
             <div class="contacts__descr descr-title">Или оставьте ваши данные и я сам вам напишу:</div>
+            <form action="#" class="contacts__form" id="contactsForm">
+                <div class="contacts__input">
+                    <input type="text" id="name" name="name" class="_req _name">
+                    <label for="name" class="contacts__label">Ваше имя <span
+                            class="contacts__label-required">*</span></label>
+                </div>
+                <div class="contacts__input">
+                    <input type="email" id="email" name="email" class="_req _email">
+                    <label for="email" class="contacts__label">Ваша почта <span
+                            class="contacts__label-required">*</span></label>
+                </div>
+                <div class="contacts__textarea">
+                    <textarea name="text" id="text"></textarea>
+                    <label for="text" class="contacts__label">Ваше сообщение</label>
+                </div>
+                <div class="contacts__trigger">
+                    <button class="contacts__button button" type="submit">Отправить сообщение</button>
+                    <div class="contacts__privacy">
+                        <input type="checkbox" name="privacy" id="privacy" class="_req _privacy">
+                        <label for="privacy" class="contacts__privacy-label">
+                            <div class="contacts__privacy-text">Я согласен(а) с
+                                <a href="privacy.html" class="contacts__privacy-link" target="_blank">политикой
+                                    конфиденциальности<span class="contacts__label-required">*</span></a>
+                                
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </section>

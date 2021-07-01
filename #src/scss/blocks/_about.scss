@@ -12,7 +12,9 @@
     // .about__img
 
     &__img {
-        width: 100%;
+        width: 400px;
+        height: 600px;
+        object-fit: cover;
     }
 
 
@@ -99,7 +101,9 @@
         &__img {
             display: block;
             margin: 0 auto;
-            width: 70%;
+            width: calc(280px + (400 - 280) * ((100vw - 320px) / (967 - 320)));
+            height: calc(340px + (600 - 340) * ((100vw - 320px) / (967 - 320)));
+            object-fit: cover;
         }
         &__descr {
             text-align: justify;
@@ -122,13 +126,13 @@
         padding-bottom: calc(30px + (60 - 30) * ((100vw - 320px) / (1200 - 320)));
     }
 }
-@media(max-width:767px){
-    .about {
-        &__img {
-            width: 100%;
-        }
-    }
-}
+// @media(max-width:767px){
+//     .about {
+//         &__img {
+//             width: 100%;
+//         }
+//     }
+// }
 
 @media(max-width:576px) {
     .about {
